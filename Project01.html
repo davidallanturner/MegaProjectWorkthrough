@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project: Number 00</title>
+<script>
+/*
+     Project: Number 01
+     Name: Find e to the Nth Digit 
+     Goal: Just like the previous problem, but with e instead of PI. Enter a number and have the program generate e up to that many decimal places. Keep a limit to how far the program will go.
+     Author: David 'f0ru0l0rd' Turner
+     Date: 20Dec2018
+     
+     Note: Because ECMAScript (standardized JavaScript) was originally built for the browser, I will assume browser DOM and events (e.g. window).
+           My solutions are wrapped in HTML for ease of viewing and usage.
+*/
+
+(function myFunction() {
+  var limiter  = prompt("How many places for e? \n(15 max)");
+  var limit = Number(limiter) + 2;
+  var num = Math.E.toString().substring(0 , limit);
+  document.getElementById("demo").innerHTML = num;
+})();
+  </script>
+  </head>
+  <body>
+    <h1 id="demo"></h1>
+  </body>
+</html>
