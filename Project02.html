@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Project02: Fibinacci Sequence</title>
+
+  </head>
+  <body>
+    <p id="demo"></p>
+        <script>
+    /*
+     Project: Number 02
+     Name: Fibonacci Sequence
+     Goal: Enter a number and have the program generate the Fibonacci sequence to that number or to the Nth number.
+     Author: David 'f0ru0l0rd' Turner
+     Date: 20Dec2018
+     
+     Note: Because ECMAScript (standardized JavaScript) was originally built for the browser, I will assume browser DOM and events (e.g. window).
+           My solutions are wrapped in HTML for ease of viewing and usage.
+    */
+      var num = prompt("Calculate the Fibonacci sequence how far?");
+      var fin = fib(num) 
+      function fib(n){
+         let arr = [0, 1];
+         for (let i = 2; i < n + 1; i++){
+          arr.push(arr[i - 2] + arr[i -1])
+         }
+        return arr[n]
+      }
+      document.getElementById("demo").innerHTML = fin;
+    </script>
+  </body>
+</html>
